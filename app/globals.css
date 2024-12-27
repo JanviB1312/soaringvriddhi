@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-250px * 14)); }
+}
+
+.slider {
+  height: 100px; 
+  overflow: hidden;
+}
+
+.slide-track {
+  display: flex;
+  animation: scroll 40s linear infinite;
+}
+
+.slide {
+  height: 100px; 
+  width: 250px; 
+}
+ */
+
+ /* globals.css */
+ @keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); } /* Move the slides 100% of their width to the left */
+}
+
+/* @layer utilities {
+   Hide scrollbar for Chrome, Safari and Opera 
+  .no-scrollbar::-webkit-scrollbar {
+      display: none;
+  }
+  Hide scrollbar for IE, Edge and Firefox 
+  .no-scrollbar {
+      -ms-overflow-style: none; 
+      scrollbar-width: none;  
+}
+} */
+
+.slide-track,
+.slide-track-second-line {
+  display: flex;
+  animation: scroll 40s linear infinite;
+}
+
+.slide {
+  width: 250px; 
+  height: 100px; 
+  flex-shrink: 0;
+}
+
+/* Hide the spacer slides */
+.slide:empty {
+  visibility: hidden;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+
